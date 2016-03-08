@@ -1,0 +1,27 @@
+<div class="container">
+  <h2 color="blue">Team India</h2>
+  <a href="index.html" >Visit Home page</a>
+  <form role="form" ng-submit="addPlayers()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="player" placeholder="Welcome to Team India" class="form-control">
+
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+
+        </span>
+      </div>
+    </div>
+  </form>
+  </br> </br>
+  <!-- Todos list -->
+  <div ui-sortable ng-model="players">
+  <p class="input-group" ng-repeat="player in players" style="padding:5px 10px; cursor: move;">
+    <input type="text" ng-model="player" class="form-control">
+  <span class="input-group-btn">
+    <button class="btn btn-danger" ng-click="removePlayer($index)" aria-label="Remove">Remove</button>
+  </span>
+
+  </p>
+    </div>
+</div>

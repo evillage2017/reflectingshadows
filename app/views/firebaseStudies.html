@@ -1,0 +1,33 @@
+<div class="container">
+  <h2 style="color: #e2e2e2">Messenger</h2>
+  <div class="panel panel-default"style="width: 70% ;color: #000000;background-color:#d58512">
+    <div class="panel-body">
+      <label for="nameInput">Name </label>
+      <input style="width: auto" ng-model="name" type="text" id="nameInput" placeholder="enter a username...">
+           </br></br>
+      <label for="nameInput">Place</label>
+      <input ng-model="place" type="text" id="placeInput" placeholder="Enter the location...">
+    </div>
+  </div>
+  <div class="panel panel-default" style="width: 70% ;color: #000000;background-color:#d58512">
+    <h3>  Post a Message</h3>
+    <div class="panel-body">
+  <input ng-model="msg" ng-keydown="addMessage($event)" type="text" id="messageInput"  placeholder="Message">
+      </div></div>
+  <div class="panel panel-default" style="width: 70% ;color: #000000;background-color:#d58512">
+    <div class="panel-body">
+      <h3>Chat window</h3>
+  <ul id="example-messages" >
+    <li ng-repeat="msg in messages">
+      <strong class="example-chat-username">{{ msg.from }}</strong>
+      <strong class="example-chat-username">{{ "(" }}</strong>
+      <strong class="example-chat-username">{{msg.place}}</strong>
+      <strong class="example-chat-username">{{"):" }}</strong>
+      {{ msg.body }}
+    </li>
+  </ul>
+      </div></div>
+</div>
+
+
+
